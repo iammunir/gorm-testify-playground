@@ -7,8 +7,10 @@ import (
 )
 
 type Handler interface {
-	GetUserByName(*gin.Context)
-	GetUserById(*gin.Context)
+	GetCustomerByName(*gin.Context)
+	GetCustomerById(*gin.Context)
+	GetCustomerByWithAccount(*gin.Context)
+	GetCustomerByWithAccountGoroutine(*gin.Context)
 }
 
 type handler struct {

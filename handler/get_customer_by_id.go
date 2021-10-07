@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func (handler *handler) GetUserById(c *gin.Context) {
+func (handler *handler) GetCustomerById(c *gin.Context) {
 
 	var customerData models.CustomerRequest
 	err := c.ShouldBindJSON(&customerData)
@@ -19,7 +19,7 @@ func (handler *handler) GetUserById(c *gin.Context) {
 		return
 	}
 
-	resultData, errCtrl := handler.contoller.GetUserById(customerData)
+	resultData, errCtrl := handler.contoller.GetCustomerById(customerData)
 	if errCtrl != nil {
 		c.JSON(http.StatusInternalServerError, errCtrl)
 		return

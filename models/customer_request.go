@@ -1,8 +1,9 @@
 package models
 
 type CustomerRequest struct {
-	CustomerId     string         `json:"customer_id,omitempty" validate:"required_without=customer_name"`
-	CustomerName   string         `json:"customer_name,omitempty" validate:"required_without=customer_id"`
+	Nik            string         `json:"nik,omitempty" validate:"required_without=customer_id"`
+	CustomerId     string         `json:"customer_id,omitempty" validate:"required_without=customer_nik"`
+	CustomerName   string         `json:"customer_name,omitempty"`
 	RequestDetails RequestDetails `json:"request_details" binding:"required"`
 }
 

@@ -3,6 +3,7 @@ package repository
 import (
 	"errors"
 	"learn-gorm/models"
+	"time"
 
 	"github.com/jinzhu/gorm"
 )
@@ -10,6 +11,7 @@ import (
 type CustomerRepository interface {
 	FindById(int) (*models.Customer, error)
 	FindByName(string) ([]models.Customer, error)
+	FindByNik(string) ([]models.Customer, error)
 }
 
 type customerRepository struct {
@@ -55,5 +57,26 @@ func (repo *customerRepository) FindByName(name string) ([]models.Customer, erro
 		return nil, errors.New("record not found")
 	}
 
+	return customers, nil
+}
+
+func (repo *customerRepository) FindByNik(nik string) ([]models.Customer, error) {
+	var customers []models.Customer
+	errExec := repo.mysqlConnection.
+		Model(&customers).
+		Select("*").
+		Where("nik = ?", nik).
+		Scan(&customers).
+		Error
+
+	if errExec != nil {
+		return nil, errExec
+	}
+
+	if len(customers) == 0 {
+		return nil, errors.New("record not found")
+	}
+
+	time.Sleep(time.Millisecond * 2000)
 	return customers, nil
 }

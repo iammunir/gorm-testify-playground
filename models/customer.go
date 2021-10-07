@@ -8,6 +8,7 @@ import (
 )
 
 type Customer struct {
+	NIK          string       `json:"nik" gorm:"column:nik"`
 	FirstName    string       `json:"first_name" gorm:"column:first_name"`
 	LastName     string       `json:"last_name" gorm:"column:last_name"`
 	Address      *Address     `json:"address,omitempty" gorm:"embedded"`
@@ -16,17 +17,19 @@ type Customer struct {
 	ContactEmail ContactEmail `json:"-" gorm:"embedded"`
 	ContactPhone ContactPhone `json:"-" gorm:"embedded"`
 
+	Account []Account `json:"account_details,omitempty"`
+
 	NickName    string `json:"nick_name" gorm:"-"`
-	Citizenship string `default:"Unknown" json:"citizenship"`
+	Citizenship string `default:"Unknown" json:"citizenship" gorm:"column:nationality"`
 
 	ArrToDelete []string `json:"arr_to_delete,omitempty"`
 }
 
 type Address struct {
-	Street  string `json:"street" gorm:"column:address_street"`
-	Zipcode string `json:"zip_code" gorm:"column:address_zipcode"`
-	City    string `json:"city" gorm:"column:address_city"`
-	Country string `json:"country" gorm:"column:address_country"`
+	Street  string `json:"street,omitempty" gorm:"column:address_street"`
+	Zipcode string `json:"zip_code,omitempty" gorm:"column:address_zipcode"`
+	City    string `json:"city,omitempty" gorm:"column:address_city"`
+	Country string `json:"country,omitempty" gorm:"column:address_country"`
 }
 
 type Company struct {
