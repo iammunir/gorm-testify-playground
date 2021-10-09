@@ -12,3 +12,7 @@ type RequestDetails struct {
 	Company int8 `json:"company,omitempty"`
 	Contact int8 `json:"contact,omitempty"`
 }
+
+type ContractRequest struct {
+	CustomerName string `json:"customer_name" binding:"required"`
+}

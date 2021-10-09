@@ -13,8 +13,9 @@ func InitRouter(mysqlConn *gorm.DB) *gin.Engine {
 
 	custRepo := repository.GetCustomerRepository(mysqlConn)
 	accRepo := repository.GetAccountRepository(mysqlConn)
+	contRepo := repository.GetContractRepository(mysqlConn)
 
-	controller := controller.NewController(custRepo, accRepo)
+	controller := controller.NewController(custRepo, accRepo, contRepo)
 	handler := handler.NewHandler(controller)
 
 	router := gin.Default()
@@ -26,6 +27,8 @@ func InitRouter(mysqlConn *gorm.DB) *gin.Engine {
 	router.POST("/get-customer-with-account", handler.GetCustomerByWithAccount)
 
 	router.POST("/get-customer-with-account-goroutine", handler.GetCustomerByWithAccountGoroutine)
+
+	router.POST("/get-contract-details", handler.GetContractDetails)
 
 	return router
 }

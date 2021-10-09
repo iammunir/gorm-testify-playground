@@ -11,7 +11,8 @@ import (
 
 var customerRepository = &repository.CustomerRepositoryMock{Mock: mock.Mock{}}
 var accountRepository = &repository.AccountRepositoryMock{Mock: mock.Mock{}}
-var customerController = NewController(customerRepository, accountRepository)
+var contractRepository = &repository.ContractRepositoryMock{Mock: mock.Mock{}}
+var customerController = NewController(customerRepository, accountRepository, contractRepository)
 
 func TestGetCustomerByIdNotFound(t *testing.T) {
 

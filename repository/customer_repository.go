@@ -77,6 +77,6 @@ func (repo *customerRepository) FindByNik(nik string) ([]models.Customer, error)
 		return nil, errors.New("record not found")
 	}
 
-	time.Sleep(time.Millisecond * 2000)
+	time.Sleep(time.Millisecond * 4000)
 	return customers, nil
 }

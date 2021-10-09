@@ -11,6 +11,7 @@ type Handler interface {
 	GetCustomerById(*gin.Context)
 	GetCustomerByWithAccount(*gin.Context)
 	GetCustomerByWithAccountGoroutine(*gin.Context)
+	GetContractDetails(*gin.Context)
 }
 
 type handler struct {
