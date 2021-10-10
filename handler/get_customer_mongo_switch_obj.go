@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func (handler *handler) GetCustomerByNameMongo(c *gin.Context) {
+func (handler *handler) GetCustomerByNameMongoWithSwitchObj(c *gin.Context) {
 
 	var customerData models.ContractRequest
 	err := c.ShouldBindJSON(&customerData)
@@ -19,7 +19,7 @@ func (handler *handler) GetCustomerByNameMongo(c *gin.Context) {
 		return
 	}
 
-	resultData, errCtrl := handler.contoller.GetCustomerByNameMongo(customerData)
+	resultData, errCtrl := handler.contoller.GetCustomerByNameMongoWithSwitchObj(customerData)
 	if errCtrl != nil {
 		c.JSON(http.StatusInternalServerError, errCtrl)
 		return

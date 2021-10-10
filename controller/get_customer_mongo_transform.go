@@ -136,18 +136,24 @@ func (ctrl *controller) GetCustomerByNameMongoWithSwitchObj(reqData models.Contr
 																newPartyObj = party
 															}
 														}
-														newCompObj.PartyRoles = append(newCompObj.PartyRoles, newPartyObj)
+														if !newPartyObj.IsEmpty() {
+															newCompObj.PartyRoles = append(newCompObj.PartyRoles, newPartyObj)
+														}
 													}
 												}
 
 											}
 										}
-										newContObj.Components = append(newContObj.Components, newCompObj)
+										if !newCompObj.IsEmpty() {
+											newContObj.Components = append(newContObj.Components, newCompObj)
+										}
 									}
 								}
 							}
 						}
-						newCustObj.Contracts = append(newCustObj.Contracts, newContObj)
+						if !newContObj.IsEmpty() {
+							newCustObj.Contracts = append(newCustObj.Contracts, newContObj)
+						}
 					}
 				}
 			}

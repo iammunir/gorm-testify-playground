@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "29a48b83-83ea-49b2-9c89-f54bd12dc8aa",
+		"name": "learn-gorm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-customer-by-name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\": \"Peci\",\r\n    \"request_details\": {\r\n        \"address\": 1,\r\n        \"company\": 1,\r\n        \"contact\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8260/get-customer-by-name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8260",
+					"path": [
+						"get-customer-by-name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-customer-with-account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nik\": \"5240336679343280\",\r\n    \"request_details\": {\r\n        \"address\": 1,\r\n        \"company\": 1,\r\n        \"contact\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8260/get-customer-with-account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8260",
+					"path": [
+						"get-customer-with-account"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get-customer-with-account / many accounts",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nik\": \"3174794396530560\",\r\n    \"request_details\": {\r\n        \"address\": 1,\r\n        \"company\": 1,\r\n        \"contact\": 0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8260/get-customer-with-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8260",
+							"path": [
+								"get-customer-with-account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Oct 2021 14:37:18 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "695"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nik\": \"3174794396530560\",\n        \"first_name\": \"Kalvin\",\n        \"last_name\": \"Pairpoint\",\n        \"address\": {\n            \"street\": \"036 Gina Hill\",\n            \"zip_code\": \"\",\n            \"city\": \"Yuyangguan\",\n            \"country\": \"China\"\n        },\n        \"company\": {\n            \"company_industry\": \"n/a\",\n            \"company_name\": \"Buzzbean\",\n            \"partner\": \"unknown\"\n        },\n        \"account_details\": [\n            {\n                \"nik\": \"3174794396530560\",\n                \"account_num\": \"40520298\",\n                \"account_name\": \"HajPlus\",\n                \"balance\": \"13050105\"\n            },\n            {\n                \"nik\": \"3174794396530560\",\n                \"account_num\": \"93057383\",\n                \"account_name\": \"PlanRetire\",\n                \"balance\": \"86512918\"\n            },\n            {\n                \"nik\": \"3174794396530560\",\n                \"account_num\": \"53207665\",\n                \"account_name\": \"Simp\",\n                \"balance\": \"21793633\"\n            },\n            {\n                \"nik\": \"3174794396530560\",\n                \"account_num\": \"20738773\",\n                \"account_name\": \"Duit\",\n                \"balance\": \"76671289\"\n            }\n        ],\n        \"nick_name\": \"Kalvin\",\n        \"citizenship\": \"CN\"\n    }\n]"
+				},
+				{
+					"name": "get-customer-with-account / single account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nik\": \"5240336679343280\",\r\n    \"request_details\": {\r\n        \"address\": 1,\r\n        \"company\": 1,\r\n        \"contact\": 0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8260/get-customer-with-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8260",
+							"path": [
+								"get-customer-with-account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Oct 2021 14:39:23 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "396"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nik\": \"5240336679343280\",\n        \"first_name\": \"Marcello\",\n        \"last_name\": \"Carleton\",\n        \"address\": {\n            \"street\": \"12 Alpine Drive\",\n            \"country\": \"China\"\n        },\n        \"company\": {\n            \"company_industry\": \"Property-Casualty Insurers\",\n            \"company_name\": \"Quatz\",\n            \"partner\": \"unknown\"\n        },\n        \"account_details\": [\n            {\n                \"nik\": \"5240336679343280\",\n                \"account_num\": \"731110\",\n                \"account_name\": \"PlanRetire\",\n                \"balance\": \"66453600\"\n            }\n        ],\n        \"nick_name\": \"Marcello\",\n        \"citizenship\": \"CN\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get-customer-with-account-goroutine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nik\": \"5240336679343280\",\r\n    \"request_details\": {\r\n        \"address\": 1,\r\n        \"company\": 1,\r\n        \"contact\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8260/get-customer-with-account-goroutine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8260",
+					"path": [
+						"get-customer-with-account-goroutine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-customer-by-id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": \"18\",\r\n    \"request_details\": {\r\n        \"address\": 1,\r\n        \"company\": 1,\r\n        \"contact\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8260/get-customer-by-id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8260",
+					"path": [
+						"get-customer-by-id"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get-customer-by-id / contact-single",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": \"8\",\r\n    \"request_details\": {\r\n        \"address\": 1,\r\n        \"company\": 0,\r\n        \"contact\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8260/get-customer-by-id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8260",
+							"path": [
+								"get-customer-by-id"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Sep 2021 16:25:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "218"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"first_name\": \"Christal\",\n    \"last_name\": \"Stockton\",\n    \"address\": {\n        \"street\": \"33069 Surrey Alley\",\n        \"zip_code\": \"6711\",\n        \"city\": \"Pulangbato\",\n        \"country\": \"Philippines\"\n    },\n    \"contact\": {\n        \"contact_type\": \"Phone\",\n        \"contact_value\": \"552-757-0831\"\n    }\n}"
+				},
+				{
+					"name": "get-customer-by-id / contact-array",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": \"10\",\r\n    \"request_details\": {\r\n        \"address\": 1,\r\n        \"company\": 0,\r\n        \"contact\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8260/get-customer-by-id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8260",
+							"path": [
+								"get-customer-by-id"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Sep 2021 16:26:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "274"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"first_name\": \"Corena\",\n    \"last_name\": \"Huband\",\n    \"address\": {\n        \"street\": \"562 Dawn Drive\",\n        \"zip_code\": \"646100\",\n        \"city\": \"Nazyvayevsk\",\n        \"country\": \"Russia\"\n    },\n    \"contact\": [\n        {\n            \"contact_type\": \"Email\",\n            \"contact_value\": \"chuband9@foxnews.com\"\n        },\n        {\n            \"contact_type\": \"Phone\",\n            \"contact_value\": \"349-372-8861\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "get-customer-by-id / without contact",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": \"10\",\r\n    \"request_details\": {\r\n        \"address\": 1,\r\n        \"company\": 0,\r\n        \"contact\": 0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8260/get-customer-by-id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8260",
+							"path": [
+								"get-customer-by-id"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Sep 2021 16:26:37 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"first_name\": \"Corena\",\n    \"last_name\": \"Huband\",\n    \"address\": {\n        \"street\": \"562 Dawn Drive\",\n        \"zip_code\": \"646100\",\n        \"city\": \"Nazyvayevsk\",\n        \"country\": \"Russia\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get-contract-details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\": \"Suwanto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8260/get-contract-details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8260",
+					"path": [
+						"get-contract-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-customer-by-name-mongo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\": \"Suwanto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8260/get-customer-by-name-mongo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8260",
+					"path": [
+						"get-customer-by-name-mongo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-customer-by-name-mongo-switch-object",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\": \"Suwanto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8260/get-customer-by-name-mongo-switch-object",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8260",
+					"path": [
+						"get-customer-by-name-mongo-switch-object"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

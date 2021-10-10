@@ -13,6 +13,7 @@ type Handler interface {
 	GetCustomerByWithAccountGoroutine(*gin.Context)
 	GetContractDetails(*gin.Context)
 	GetCustomerByNameMongo(*gin.Context)
+	GetCustomerByNameMongoWithSwitchObj(*gin.Context)
 }
 
 type handler struct {

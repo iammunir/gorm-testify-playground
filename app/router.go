@@ -35,5 +35,7 @@ func InitRouter(mysqlConn *gorm.DB, mongoConn *mongo.Database) *gin.Engine {
 
 	router.POST("/get-customer-by-name-mongo", handler.GetCustomerByNameMongo)
 
+	router.POST("/get-customer-by-name-mongo-switch-object", handler.GetCustomerByNameMongoWithSwitchObj)
+
 	return router
 }
