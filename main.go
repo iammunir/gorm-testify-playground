@@ -22,7 +22,12 @@ func main() {
 	}
 	defer mysqlConn.Close()
 
-	router := app.InitRouter(mysqlConn)
+	mongoConn, err := config.ConnectMongoDB()
+	if err != nil {
+		log.Fatalln("Error DB connection: ", err.Error())
+	}
+
+	router := app.InitRouter(mysqlConn, mongoConn)
 	log.Println("routes Initialized")
 
 	port := config.Getenv("PORT", "8260")

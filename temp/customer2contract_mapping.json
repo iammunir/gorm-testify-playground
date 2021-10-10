@@ -1,0 +1,135 @@
+[
+    {
+        "cont_id": "196-ukd-224",
+        "full_name": "Suwanto",
+        "contracts": [
+            {
+                "contract_id": "26H59R94",
+                "components": [
+                    {
+                        "component_id": "2D19LE934BM58709",
+                        "party_roles": [
+                            {
+                                "party_role_id": "394KGYT15911"
+                            },
+                            {
+                                "party_role_id": "175VGVO39188"
+                            },
+                            {
+                                "party_role_id": "639ZFZQ81718"
+                            }
+                        ]
+                    },
+                    {
+                        "component_id": "61S70K49",
+                        "party_roles": [
+                            {
+                                "party_role_id": "733AMOG05740"
+                            },
+                            {
+                                "party_role_id": "574MSNN26003"
+                            }
+                        ]
+                    },
+                    {
+                        "component_id": "9M35YS274NT91347",
+                        "party_roles": [
+                            {
+                                "party_role_id": "538EZQZ47562"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "contract_id": "21J82N85",
+                "components": [
+                    {
+                        "component_id": "1T98DX206YS86646",
+                        "party_roles": [
+                            {
+                                "party_role_id": "091GFVN11369"
+                            },
+                            {
+                                "party_role_id": "409JPKQ49517"
+                            }
+                        ]
+                    },
+                    {
+                        "component_id": "9V84VC793HW11896",
+                        "party_roles": [
+                            {
+                                "party_role_id": "625HAWJ84355"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "cont_id": "496-wbk-743",
+        "full_name": "Sugianto",
+        "contracts": [
+            {
+                "contract_id": "57E28L58",
+                "components": [
+                    {
+                        "component_id": "6P49AZ288MX69305",
+                        "party_roles": null
+                    }
+                ]
+            },
+            {
+                "contract_id": "25G00P10",
+                "components": [
+                    {
+                        "component_id": "0V90RE664OY43466",
+                        "party_roles": [
+                            {
+                                "party_role_id": "372TTFW58921"
+                            },
+                            {
+                                "party_role_id": "419GOBG67519"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "cont_id": "116-jwo-611",
+        "full_name": "Sumanto",
+        "contracts": [
+            {
+                "contract_id": "36X50T08",
+                "components": null
+            },
+            {
+                "contract_id": "25N66Q39",
+                "components": [
+                    {
+                        "component_id": "7D42ST109WB21925",
+                        "party_roles": [
+                            {
+                                "party_role_id": "176YJXY70556"
+                            },
+                            {
+                                "party_role_id": "647PUIS82355"
+                            },
+                            {
+                                "party_role_id": "756AOUB29039"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "cont_id": "693-gux-907",
+        "full_name": "Subanto",
+        "contracts": null
+    }
+]

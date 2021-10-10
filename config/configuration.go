@@ -16,13 +16,18 @@ const ENVIRONMENT string = LOCAL // LOCAL, DEVELOPMENT, PRODUCTION
 var env = map[string]map[string]string{
 	// local environment configuration
 	"local": {
-		"PORT":         "8260",
-		"PQS_URL":      "http://127.0.0.1:8765",
-		"MYSQL_HOST":   "localhost",
-		"MYSQL_PORT":   "3306",
-		"MYSQL_USER":   "root",
-		"MYSQL_PASS":   "admin",
-		"MYSQL_SCHEMA": "tutorials",
+		"PORT":                       "8260",
+		"PQS_URL":                    "http://127.0.0.1:8765",
+		"MYSQL_HOST":                 "localhost",
+		"MYSQL_PORT":                 "3306",
+		"MYSQL_USER":                 "root",
+		"MYSQL_PASS":                 "admin",
+		"MYSQL_SCHEMA":               "tutorials",
+		"MONGO_URI":                  "mongodb://root:admin@localhost:27017",
+		"MONGO_DATABASE":             "tutorial",
+		"MONGO_POOL_MIN":             "10",
+		"MONGO_POOL_MAX":             "100",
+		"MONGO_MAX_IDLE_TIME_SECOND": "60",
 	},
 
 	// development environment configuration
